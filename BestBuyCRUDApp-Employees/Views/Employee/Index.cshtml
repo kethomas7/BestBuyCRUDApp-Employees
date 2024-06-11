@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Employee>;
+
+<h2>Employees</h2>
+<table class="table">
+    <tr>
+        <th>EmployeeID</th>
+        <th>FirstName</th>
+        <th>MiddleInitial</th>
+        <th>LastName</th>
+        <th>EmailAddress</th>
+        <th>PhoneNumber</th>
+        <th>Title</th>
+        <th>DateOfBirth</th>
+    </tr>
+
+    @foreach (var person in @Model)
+    {
+        <tr>
+            <td>@person.EmployeeID</td>
+            <td>@person.FirstName</td>
+            <td>@person.MiddleInitial</td>
+            <td>@person.LastName</td>
+            <td>@person.EmailAddress</td>
+            <td>@person.PhoneNumber</td>
+            <td>@person.Title</td>
+            <td>@person.DateofBirth</td>
+        </tr>
+    }
+
+</table>
